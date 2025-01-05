@@ -5,18 +5,7 @@ import { RouterModule } from '@angular/router';
   selector: 'app-root',
   standalone: true,
   imports: [RouterModule],
-  template: `
-    <nav>
-      <a routerLink="/">Home</a>
-      <a routerLink="/historia">História</a>
-      <a routerLink="/agenda">Agenda</a>
-      <a routerLink="/lancamentos">Lançamentos</a>
-      <a routerLink="/banda">Banda</a>
-      <a routerLink="/contato">Contato</a>
-      <a routerLink="/loja">Loja</a>
-    </nav>
-    <router-outlet></router-outlet>
-  `,
+  templateUrl: './app.component.html',
   styles: [`
     nav {
       display: flex;
