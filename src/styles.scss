@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+// Paletas de cores personalizadas
+$zsc-primary: mat.define-palette(mat.$purple-palette, 800, 500);
+$zsc-accent: mat.define-palette(mat.$green-palette, 300, 100);
+
+// Tema customizado
+$zsc-theme: mat.define-light-theme((
+  color: (
+    primary: $zsc-primary,
+    accent: $zsc-accent,
+  ),
+  typography: mat.define-typography-config(), // Configuração de tipografia opcional
+));
+
+@include mat.all-component-themes($zsc-theme);
+
+body {
+  margin: 0;
+  font-family: Roboto, Arial, sans-serif;
+  background-color: mat.get-color-from-palette($zsc-primary);
+}
+
+mat-toolbar {
+  background-color: mat.get-color-from-palette($zsc-primary);
+  color: mat.get-color-from-palette($zsc-accent);
+  display: flex;
+  justify-content: space-around;
+}
+
+
+mat-toolbar a {
+  color: mat.get-color-from-palette($zsc-accent);
+  text-decoration: none;
+  padding: 5px 15px;
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+  text-align: center;
+
+  &:hover {
+    background-color: mat.get-color-from-palette($zsc-accent, 800);
+    color: mat.get-color-from-palette($zsc-primary);
+  }
+}
