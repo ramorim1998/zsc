@@ -1,13 +1,21 @@
 .video-frame {
-  position: fixed; /* Fixa o elemento em relação à janela */
-  top: 50%;        /* Posiciona no centro vertical da tela */
-  right: 0;        /* Encosta na borda direita da tela */
-  transform: translateY(-50%); /* Ajusta para centralizar verticalmente */
-  z-index: 1;      /* Garante que o vídeo fique acima de outros elementos */
-  padding: 10px;   /* Adiciona espaço entre o vídeo e a borda direita */
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+  padding: 10px;
+}
+.name {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
+  z-index: 1;
+  padding: 10px;
+  filter: invert(1) brightness(2);
+  width: 400px;
+  height: 400px;
 }
 
-// iframe {
-//   max-width: 100%; /* Impede que o iframe ultrapasse a largura disponível */
-//   height: 50%;    /* Mantém a proporção do vídeo */
-// }
+
