@@ -1,13 +1,15 @@
-<mat-toolbar>
-  <img src="/zsc branco.png" alt="logo-branco" width="80px" height="65px"/>
-  <a mat-button routerLink="/home">Home</a>
-  <a mat-button routerLink="/historia">História</a>
-  <a mat-button routerLink="/agenda">Agenda</a>
-  <a mat-button routerLink="/lancamentos">Lançamentos</a>
-  <a mat-button routerLink="/banda">Banda</a>
-  <a mat-button routerLink="/contato">Contato</a>
-  <a mat-button routerLink="/loja">Loja</a>
-</mat-toolbar>
-<div class="back-img">
-  <router-outlet></router-outlet>
+<app-navbar></app-navbar>
+
+<div class="page-container">
+  <app-home class="home"></app-home>
+  <app-history class="history"></app-history>
 </div>
+
+<footer>
+  <div class="footer-logo">
+    <span>Powered by: </span>
+    <span class="rest">C</span>
+    <span class="chair-h">h</span>
+    <span class="rest">AIRMAN DEV</span>
+  </div>
+</footer>

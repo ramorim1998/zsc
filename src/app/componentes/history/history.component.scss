@@ -1,29 +1,65 @@
-.history{
-  display: flex  ;
-      align-items: center;
-      justify-content: flex-end;
-      position: absolute;
-      top: 50%;
-      left: 25px;
-      z-index: 1;
-      padding: 20px;
-      gap: 20px;
-      height: 0;
-      margin-left: 100px;
-      width: 90%;
+.history {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  top: 50%;
+  z-index: 1;
+  padding: 20px;
+  gap: 20px;
+  height: 50vh;
+  margin-bottom: 7.5%;
+  width: 100%;
+  margin-top: 1.5%;
+  // background: linear-gradient(145deg, #63414b, #0d0708);
+  background: linear-gradient(to bottom, rgba(231, 25, 152, 0.295), rgba(172, 32, 32, 0.1),rgba(255, 255, 255, 0.1));
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
-.text{
+
+.mat-mdc-card {
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+.text {
   flex: 1;
-  background-color: rgba(0, 0, 0, 0.8);
   color: white;
   padding: 10px;
-  border-radius: 8px;
-  width: 250px;
+  width: 35%;
   position: absolute;
-  left: 0;
+  left: 5%;
+  top: 5%;
+   p {
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: justify;
+   }
 }
+
 .img img {
-  max-width: 630px;
-  height: auto;
+  width: 1200px;
+  height: 100vh;
   border-radius: 8px;
+  margin-bottom: 70px;
+}
+
+.container {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 0 0 70px;
+  width: calc(100% - 40px);
+  height: calc(15vh - 40px);
+  background-image: url('/bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-color: rgb(27, 27, 27);
+  box-shadow: 0px 0px 10px rgb(27, 27, 27);
+  filter: brightness(0.6);
 }

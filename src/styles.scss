@@ -1,122 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
-@use '@angular/material' as mat;
-
-// Paletas de cores personalizadas
-$zsc-primary: mat.define-palette(mat.$purple-palette, 800, 500);
-$zsc-accent: mat.define-palette(mat.$green-palette, 300, 100);
-
-// Tema customizado
-$zsc-theme: mat.define-light-theme((
-  color: (
-    primary: $zsc-primary,
-    accent: $zsc-accent,
-  ),
-  typography: mat.define-typography-config(), // Configuração de tipografia opcional
-));
-
-@include mat.all-component-themes($zsc-theme);
-
 body {
+  overflow-x: hidden;
   margin: 0;
   font-family: Roboto, Arial, sans-serif;
-  background-color: rgb(27, 27, 27);
-
+  background-color: rgb(0, 0, 0);
 }
 
-.container {
-  position: relative; /* Para posicionar a imagem */
-  margin: 0 0 0 70px; /* Margem no topo e na esquerda */
-  width: calc(100% - 40px); /* Ajusta a largura para respeitar a margem */
-  height: calc(100vh - 40px); /* Ajusta a altura para respeitar a margem */
-  background-image: url('/bg.png'); /* Caminho da imagem */
-  background-size: cover; /* Faz a imagem cobrir o contêiner */
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: rgb(27, 27, 27);
-  box-shadow: 0px 0px 10px rgb(27, 27, 27); /* (Opcional) Adiciona uma sombra para dar destaque */
-}
-
-footer{
-margin: 30px ;
-display:flex;
-align-items: start;
-padding: 10px;
-}
-
-.footer-logo {
-  font-family: 'Arial', sans-serif;
-  font-size: 1rem;
-  color: #2E3A59; /* Azul-escuro */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.2rem;
-}
-
-.footer-logo span {
-  display: inline-block;
-  position: relative;
-}
-
-.footer-logo .chair-h {
-  font-weight: bold;
-  color: #3A5BA8; /* Azul para destaque */
-  position: relative;
-  font-size: 1.5rem; /* Destaque para o "h" */
-  line-height: 1; /* Ajusta o espaçamento */
-}
-
-.footer-logo .chair-h::before {
-  content: '';
+.gray-line {
   position: absolute;
-  bottom: -0.1rem;
-  left: 0.15rem;
-  width: 0.6rem;
-  height: 0.15rem;
-  background-color: #3A5BA8; /* Assento da cadeira */
+  top: 100%;
+  left: 0;
+  margin-top: 2.8%;
+  width: 100%;
+  height: 1.7%;
+  background-color: #4d5154;
+  box-shadow: 0.3px 0 #333638;
+  border: none;
 }
-
-.footer-logo .chair-h::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0.15rem;
-  width: 0.15rem;
-  height: 0.8rem;
-  background-color: #3A5BA8; /* Encosto da cadeira */
-}
-
-.footer-logo .rest {
-  font-weight: lighter;
-}
-
-
-mat-toolbar {
-  background-color: rgb(27, 27, 27);
-  color: rgb(27, 27, 27);
-  display: flex;
-  justify-content: flex-end;
-  z-index: 1;
-  img{
-    position: absolute;
-    right: 92%;
-  }
-}
-
-
-mat-toolbar a {
-  color: mat.get-color-from-palette($zsc-accent);
-  text-decoration: none;
-  padding: 5px 15px;
-  transition: all 0.5s ease-in-out;
-  text-align: center;
-  margin: 0 20px;
-
-  &:hover {
-    background-color: mat.get-color-from-palette($zsc-accent, 800);
-    color: mat.get-color-from-palette($zsc-primary);
-  }
-}
-
-
-

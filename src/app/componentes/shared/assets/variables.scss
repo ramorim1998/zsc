@@ -1,0 +1,18 @@
+@use '@angular/material' as mat;
+
+$zsc-primary: mat.define-palette(mat.$purple-palette, 800, 500);
+$zsc-accent: mat.define-palette(mat.$green-palette, 300, 100);
+
+$zsc-theme: mat.define-light-theme((
+  color: (
+    primary: $zsc-primary,
+    accent: $zsc-accent,
+  ),
+  typography: mat.define-typography-config(),
+));
+
+@include mat.all-component-themes($zsc-theme);
+
+$primary-color: mat.get-color-from-palette($zsc-primary);
+$accent-color: mat.get-color-from-palette($zsc-accent);
+$accent-color-dark: mat.get-color-from-palette($zsc-accent, 800);

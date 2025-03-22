@@ -1,5 +1,63 @@
-.back-img{
-  background-image: '/zsc.jpg';
-  width: 80%;
-  height: 100%;
+.page-container {
+  display: flex;
+  flex-direction: column;
+  // height: 100%;
+}
+
+.home {
+  margin-bottom: 1%;
+}
+
+footer {
+  margin: 30px;
+  display: flex;
+  align-items: start;
+  padding: 10px;
+}
+
+.footer-logo {
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  color: #2E3A59;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.footer-logo span {
+  display: inline-block;
+  position: relative;
+}
+
+.footer-logo .chair-h {
+  font-weight: bold;
+  color: #3A5BA8;
+  position: relative;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.footer-logo .chair-h::before {
+  content: '';
+  position: absolute;
+  bottom: -0.1rem;
+  left: 0.15rem;
+  width: 0.6rem;
+  height: 0.15rem;
+  background-color: #3A5BA8;
+}
+
+.footer-logo .chair-h::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0.15rem;
+  width: 0.15rem;
+  height: 0.8rem;
+  background-color: #3A5BA8;
+}
+
+.footer-logo .rest {
+  font-weight: lighter;
 }
